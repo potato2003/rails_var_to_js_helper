@@ -7,7 +7,7 @@ module RailsVarToJsHelper
 
   class << self
     def pass_to_js_tag(vars = {})
-      result = +"<script>"
+      result = +"<script>\n"
 
       vars.each do |(k, v)|
         result << "window.#{k} = #{pass_to_js(v)};\n"
