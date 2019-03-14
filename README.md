@@ -3,7 +3,7 @@ Pass the Rails variable to JavaScript
 
 ## Usage
 ```
-<%== pass_to_js({a: 1, b: "str"}) %>
+<%== pass_to_js_tag({a: 1, b: "str"}) %>
 
 #=> 
 # <script>
