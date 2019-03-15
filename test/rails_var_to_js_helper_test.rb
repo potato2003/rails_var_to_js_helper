@@ -4,9 +4,13 @@ class RailsVarToJsHelper::Test < ActiveSupport::TestCase
   include RailsVarToJsHelper
 
   test "#pass_to_js_tag" do
-    expected = 0
-    actual   = pass_to_js(0)
-    assert_equal expected, actual
+    expected1 = %r|<script>.+</script>|m
+    expected2 = %r|window\.a.*=.*1;|
+    expected3 = %r|window\.b.*=.*"str";|
+    actual    = pass_to_js_tag({a: 1, b: "str"})
+    assert_match expected1, actual
+    assert_match expected2, actual
+    assert_match expected3, actual
   end
 
   test "#pass_to_js with Integer" do
