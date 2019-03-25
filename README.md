@@ -1,3 +1,5 @@
+[![Gem Version](https://badge.fury.io/rb/rails_var_to_js_helper.svg)](https://badge.fury.io/rb/rails_var_to_js_helper)
+
 # RailsVarToJsHelper
 Pass the Rails variable to JavaScript
 
